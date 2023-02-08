@@ -1,7 +1,7 @@
 import React from "react";
 function Note(){
     return <div className="note">
-        <h1 >React Training</h1>
+        <h1>React Training</h1>
         <p>This is peragraph</p>
     </div>
 }
