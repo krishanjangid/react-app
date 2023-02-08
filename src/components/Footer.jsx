@@ -3,8 +3,6 @@ const date = new Date();
 const year = date.getFullYear();
 
 function Footer(){
-    return <div>
-        <p>Copyrights &Copyrights; {year}</p>
-    </div>
+    return <p>Copyrights &copy; {year}</p>
 }
 export default Footer;
