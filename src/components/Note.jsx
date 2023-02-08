@@ -1,8 +1,10 @@
 import React from "react";
-function Note(){
+function Note(props){
+
     return <div className="note">
-        <h1>React Training</h1>
-        <p>This is peragraph</p>
+        <h1>{props.name}</h1>
+        <p>{props.college}</p>
+        <p>{props.course}</p>
     </div>
 }
 export default Note;

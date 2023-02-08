@@ -23,6 +23,9 @@ function App(){
     return <div>
         <Header />
         <Note name = {ar[0].name} college = {ar[0].college} course= {ar[0].course}/>
+        <Note name = {ar[1].name} college = {ar[1].college} course= {ar[1].course}/>
+        <Note name = {ar[2].name} college = {ar[2].college} course= {ar[2].course}/>
+
         <Footer />
     </div>
 }
