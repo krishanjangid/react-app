@@ -8,7 +8,6 @@ function createContact(Contacts)
 {
    
    return (<Cards 
-    id = {Contacts.id}
     key = {Contacts.id}
     name = {Contacts.name}
     imgsrc = {Contacts.imgsrc}
