@@ -4,6 +4,19 @@ import Contacts from "./Contacts";
 import Images from "./Images";
 import Info from "./Info";
 
+function createContact(Contacts)
+{
+   
+   return (<Cards 
+    id = {Contacts.id}
+    key = {Contacts.id}
+    name = {Contacts.name}
+    imgsrc = {Contacts.imgsrc}
+    phone = {Contacts.phone}
+    email = {Contacts.email}
+    />)
+}
+
 function App(){
     return <div>
         <div>
@@ -13,7 +26,8 @@ function App(){
     phone = {Contacts[0].phone}
     email = {Contacts[0].email}
     />
-    <Cards 
+    {Contacts.map(createContact)}
+    {/* <Cards 
     name = {Contacts[0].name}
     imgsrc = {Contacts[0].imgsrc}
     phone = {Contacts[0].phone}
@@ -30,7 +44,7 @@ function App(){
     imgsrc = {Contacts[2].imgsrc}
     phone = {Contacts[2].phone}
     email = {Contacts[2].email}
-    />
+    /> */}
     </div>
     </div>
 }
