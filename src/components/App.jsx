@@ -2,13 +2,17 @@ import React from "react";
 import Cards from "./Cards";
 import Contacts from "./Contacts";
 import Images from "./Images";
-
+import Info from "./Info";
 
 function App(){
     return <div>
         <div>
     <h1 className='heading'>My Contacts</h1>
     <Images img= {'https://content.presspage.com/uploads/1369/1920_boakye-3.jpg'}/>
+    <Info 
+    phone = {Contacts[0].phone}
+    email = {Contacts[0].email}
+    />
     <Cards 
     name = {Contacts[0].name}
     imgsrc = {Contacts[0].imgsrc}

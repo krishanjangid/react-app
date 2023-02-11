@@ -1,16 +1,19 @@
 import React from "react";
 import Images from "./Images";
+import Info from "./Info";
 function Cards(props){
     return (<div className='card'>
     <div className='top'>
     <h2 className='name'>{props.name}</h2>
     <Images
-    img={props.imgsrc}
+    img = {props.imgsrc}
     />
     </div>
     <div className='bottom'>
-    <p className='info'>{props.phone}</p>
-    <p className='info'>{props.email}</p>
+    <Info
+    phone = {props.phone}
+    email = {props.email}
+    />
     </div>
     </div>)
 }
