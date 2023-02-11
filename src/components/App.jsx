@@ -1,11 +1,14 @@
 import React from "react";
 import Cards from "./Cards";
 import Contacts from "./Contacts";
+import Images from "./Images";
+
 
 function App(){
     return <div>
         <div>
     <h1 className='heading'>My Contacts</h1>
+    <Images img= {'https://content.presspage.com/uploads/1369/1920_boakye-3.jpg'}/>
     <Cards 
     name = {Contacts[0].name}
     imgsrc = {Contacts[0].imgsrc}
