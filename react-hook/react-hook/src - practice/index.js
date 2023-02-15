@@ -1,13 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './components/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App/>
-     );
+ReactDOM.render(<App />, document.getElementById("root"));
 
-    //Challenge:
+//Challenge:
 //1. Given that you can get the current time using:
 let time = new Date().toLocaleTimeString();
 console.log(time);

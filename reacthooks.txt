@@ -1,0 +1,269 @@
+
+declarative programming
+// const isDone=false;
+//   const strickThrough={textDecoration:"line-through"};
+//   return (
+//     <p style={isDone ?strickThrough : null}>buy milk</p>
+//   );
+// } 
+
+impertive programming
+//
+function strick(){
+  document.getElementById('root').style.textDecoration="line-through"
+}
+function unstrick(){
+  document.getElementById('root').style.textDecoration="none"
+}
+
+function App() {
+  return (
+    <div>
+    <p>buy milk</p>
+    <button onClick={strick}>Get through</button>
+    <button onClick={unstrick}>remove line</button>
+    </div>
+  );
+
+// not rendering again and output not working in declartive programming.
+var isDone=false;
+function strick(){
+  isDone=true;
+}
+function unstrick(){
+  isDone=false;
+}
+
+function App() {
+  return (
+    <div>
+    <p style={isDone ?{textDecoration:"line-through"}:null}>buy milk</p>
+    <button onClick={strick}>Get through</button>
+    <button onClick={unstrick}>remove line</button>
+    </div>
+  );
+
+//// rerender the output without hook
+const root = ReactDOM.createRoot(document.getElementById('root'));
+var count=0;
+function increase(){
+  count++;
+  console.log(count);
+  root.render(
+    <div className="container">
+      <h1>{count}</h1>
+      <button onClick={increase}>+</button>
+    </div>
+    
+  );
+  
+}
+root.render(
+  <div className="container">
+    <h1>{count}</h1>
+    <button onClick={increase}>+</button>
+  </div>
+  
+);
+
+//// react hook
+import React from "react";
+
+function App() {
+  // var count=0;
+  var state=React.useState();
+  console.log(state);
+function increase(){
+  // count++;
+}
+  return (
+    <div className="container">
+    <h1>0</h1>
+    <button onClick={increase}>+</button>
+  </div>
+  );
+}
+export default App;
+
+import React, {useState} from "react";
+
+function App() {
+  // var count=0;
+  var state=useState(2);
+  
+function increase(){
+  // count++;
+}
+  return (
+    <div className="container">
+    <h1>{state[0]}</h1>
+    <button onClick={increase}>+</button>
+  </div>
+  );
+}
+export default App;
+
+
+///destructure programming example
+function App() {
+  // var count=0;
+  var state=useState(2);
+  const [red,green,blue]=[15,65,97];
+  console.log(red);
+function increase(){
+  // count++;
+}
+  return (
+    <div className="container">
+    <h1>{state[0]}</h1>
+    <button onClick={increase}>+</button>
+  </div>
+  );
+}
+export default App;
+
+/////
+function App() {
+  // var count=0;
+  var [count]=useState(566);
+  
+function increase(){
+  // count++;
+}
+  return (
+    <div className="container">
+    <h1>{count}</h1>
+    <button onClick={increase}>+</button>
+  </div>
+  );
+}
+export default App;
+
+/// re render using hooks (useState)
+import React, {useState} from "react";
+
+function App() {
+  // var count=0;
+  var [count,setCount]=useState(0);
+  
+function increase(){
+     setCount(count+1);
+}
+  return (
+    <div className="container">
+    <h1>{count}</h1>
+    <button onClick={increase}>+</button>
+  </div>
+  );
+}
+export default App;
+
+
+
+//import React, {useState} from "react";
+
+function App() {
+  // var count=0;
+  var [count,setCount]=useState(0);
+  function increase(){
+     setCount(count+1);
+}
+function decrease(){
+  setCount(count-1);
+}
+  return (
+    <div className="container">
+    <h1>{count}</h1>
+    <button onClick={increase}>+</button>
+    <button onClick={decrease}>-</button>
+  </div>
+  );
+}
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const isDone=false;
+//   const strickThrough={textDecoration:"line-through"};
+//   return (
+//     <p style={isDone ?strickThrough : null}>buy milk</p>
+//   );
+// } declarative programming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const isDone=false;
+//   const strickThrough={textDecoration:"line-through"};
+//   return (
+//     <p style={isDone ?strickThrough : null}>buy milk</p>
+//   );
+// } declarative programming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const isDone=false;
+//   const strickThrough={textDecoration:"line-through"};
+//   return (
+//     <p style={isDone ?strickThrough : null}>buy milk</p>
+//   );
+// } declarative programming
+
